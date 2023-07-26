@@ -1,0 +1,54 @@
+/* 對話框容器 */
+.chat-container {
+  max-width: 500px;
+  margin: 20px auto;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 使用者訊息 */
+.user-message {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* 機器人訊息 */
+.bot-message {
+  background-color: #d4edfa;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* 訊息內容 */
+.message-content {
+  color: #333;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* 輸入框和按鈕一起置中 */
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#userInput {
+  width: 200px; /* 調整輸入框的寬度，根據需要調整這個數值 */
+  padding: 5px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
