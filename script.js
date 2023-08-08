@@ -3,7 +3,7 @@ let content = document.getElementById('content');
 
 let progress = 0;
 let interval = setInterval(function() {
-    progress += 25;
+    progress += 15;
     progressBar.style.width = progress + '%';
 
     if (progress >= 100) {
