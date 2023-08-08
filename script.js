@@ -1,3 +1,21 @@
+let progressBar = document.getElementById('progress-bar');
+let content = document.getElementById('content');
+
+let progress = 0;
+let interval = setInterval(function() {
+    progress += 25;
+    progressBar.style.width = progress + '%';
+
+    if (progress >= 100) {
+        clearInterval(interval);
+        setTimeout(function() {
+            document.getElementById('loading-container').style.display = 'none';
+            content.style.display = 'block';
+            content.classList.add('sliding'); // 添加sliding類來觸發滑動效果
+        }, 500);
+    }
+}, 100);
+
 //All images taken from PEXELS.COM - free stock images
 "use strict";
 
