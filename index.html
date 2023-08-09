@@ -33,12 +33,9 @@
 			</div>
 			<div class="collapse navbar-collapse" id="navbarButtons">          
 			  <ul class="nav navbar-nav navbar-right">
-				<li id="navAbout" class="btn navbar-btn navActive">About</li>
-				<li id="navServices" class="btn navbar-btn">Services</li>
-				<li id="navContact" class="btn navbar-btn">Contact</li>
-				<a id="navChatbot" class="btn navbar-btn" href="chatbot.html">Chatbot</a>
-
-				
+				<li id="navAbout" class="btn navbar-btn navActive">量化交易</li>
+				<li id="navServices" class="btn navbar-btn">Python項目</li>
+				<a id="navTrade" class="btn navbar-btn" href="https://github.com/kakaPao/trade">專案</a>
 			  </ul>
 			</div>
 		  </div>
@@ -97,66 +94,56 @@
 			<div class="serviceBlock col-md-4">
 			  <h1>數據收集</h1>				  
 				<img alt="Python" src="python.png">
-			  <p>使用Python搭配永豐Shioaji來收集各股資料並存於Sqlite中。為確保資料的完整性和準確性。<br>(未來將增進爬蟲功能。)</p>
+			  <p>Python、永豐Shioaji、Sqlite來收集Kbar與ticks資料供回測使用。為確保資料的完整性和準確性。<br>(未來：增進爬蟲功能。)</p>
 			</div>
 			<div class="serviceBlock col-md-4">
 			  <h1>策略回測</h1>
 			  <img src="strategy.png" />
-			  <p>透過backtrader進行歷史數據模擬，評估策略的過去表現。此階段旨在熟悉回測機制和策略評估，讓交易者在真實投資前能夠對策略進行優化。<br>(苦戰中)</p>
+			  <p>backtrader進行歷史數據模擬，評估策略的過去表現。此階段旨在熟悉回測機制和策略評估，讓交易者在真實投資前能夠對策略進行優化。<br>(苦戰中)</p>
 			</div>
 			<div class="serviceBlock col-md-4">
 			  <h1>實時交易</h1>
 			  <img src="program.png" />
-			  <p>策略在真實市場環境下的執行。此過程涉及實時數據分析、自動化交易指令的執行，並會根據市場動態調整策略。<br>(未來將實現Shioaji和Line Bot。)</p>
+			  <p>Python、tkinter、永豐Shioaji策略在真實市場環境下的執行。此過程涉及實時數據分析、自動化交易指令的執行，並會根據市場動態調整策略。<br>(構建中。未來：串接Shioaji、TA-Lib和Line Bot。)</p>
 			</div>
 		  </div>
 		</div>
-	<!--  Contact form      -->
-		  <div id="phoneContact" class="phoneContact row">
+
+		<!-- ChatGPT Introduction -->
+		<div id="servicesRow" class="parallaxSection">
+			<div class="shadowSection">
+				<h2>ChatGPT 技術介紹</h2>
+				<hr />
+			</div>
+		</div>
+		<div id="serviceBlocks" class="row">
 			<div class="container">
-			  <h2>CONTACT US BY PHONE TODAY! CALL 1-555-555-5555</h2>
+				<div class="serviceBlock col-md-4">
+					<h1>背景</h1>
+					
+					<p>ChatGPT 是由 OpenAI 開發的先進語言模型。它是基於 GPT (Generative Pre-trained Transformer) 系列中的最新模型，受到大量資料的訓練。</p>
+				</div>
+				<div class="serviceBlock col-md-4">
+					<h1>功能</h1>
+					
+					<p>ChatGPT 能夠生成接近人類的文本。無論是回答問題、生成文章，還是協助編碼，它都有出色的性能。</p>
+				</div>
+				<div class="serviceBlock col-md-4">
+					<h1>應用場景</h1>
+					
+					<p>學習語法、產生框架、但要學習，除錯很不容易精準。目標是快速利用ChatGPT搭建系統。</p>
+				</div>
 			</div>
-		  </div> 
-		  <div class="container">               
-			<div id="contactRow" class="contactForm row">
-			  <h2>CONTACT FORM</h2>
-			  <hr />
-			  <h3>Enter you contact informaiton and message below.</h3>
-			  <form name="contactForm" class="form-group" action="#" method="POST">
-				<input id="formName" name="name" class="inputInline form-control" type="text" placeholder="Name" required />
-				<input id="formEmail" name="email" class="inputInline form-control" type="email" placeholder="Email" required />
-				<textarea id="formMessage" name="message" class="form-control" type="text" placeholder="Message" required></textarea>
-				<input name="submit" class="bannerBtn" type="submit" value="SEND MESSAGE" />
-			  </form>
-			</div>        
-		  </div>
-	<!--  Contact info      -->
-		<div id="contactInfo" class="row">
-		  <div class="container">
-			<div class="contactStack col-md-4">
-			  <h4>ADDRESS</h4>
-			  <p>123 Test Avenue</p>
-			  <p>Charlotte, NC 28216</p>
-			</div>
-			<div class="contactStack col-md-4">
-			  <h4>OPERATION HOURS</h4>
-			  <p>Mon-Thurs: 10:00 AM - 11:00 PM</p>
-			  <p>Fri-Sun: 11:00 AM - 02:00 AM</p>
-			</div>
-			<div class="contactStack col-md-4">
-			  <h4>CONTACT INFO</h4>
-			  <p>Phone: 555-555-5555</p>
-			  <p>Email: email@Kaka </p>
-			</div>
-		  </div>
 		</div>
+
+	
 	<!--  Copyright    -->
 		<div id="copyright" class="row">
 		  <div class="container">
 			<div id="socialBtn">
 			  <a href="#" class="social"><img id="facebook"></a>
 			  <a href="#" class="social"><img id="twitter"></a>
-			  <a href="#" class="social"><img id="linkedin"></a>
+			  <a href="#" class="social"><img id="youtube"></a>
 			</div>
 			<p>&copy; 2023 Kaka Pao. All rights reserved. Designed and created by Mitchell Console</p>
 		  </div>

@@ -6,8 +6,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: url('load_image.png');
-    background-image: linear-gradient(rgba(100, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('load_image.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url('bg_i.png');
 	background-size: cover;
     z-index: 1000;
 }
@@ -49,7 +48,7 @@
 
 @keyframes slideIn {
     0% {
-        transform: translateY(-100%);
+        transform: translateY(-20%);
     }
     100% {
         transform: translateY(0);
@@ -288,10 +287,17 @@ hr {
   background-repeat: no-repeat;
 }
 #copyright #linkedin {
-  background-image: url("https://pbs.twimg.com/profile_images/614583061448036352/CBpFkPaz.png");
+  background-image: url("https://marketplace.canva.cn/MADRpnimTbw/1/thumbnail_large/canva-MADRpnimTbw.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+#copyright #youtube {
+  background-image: url("https://icons-for-free.com/download-icon-youtube+icon-1320191984125743976_0.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 #copyright .social, #copyright img {
   height: 50px;
   width: 50px;
