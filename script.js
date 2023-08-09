@@ -1,20 +1,30 @@
 let progressBar = document.getElementById('progress-bar');
 let content = document.getElementById('content');
 
-let progress = 0;
-let interval = setInterval(function() {
-    progress += 10;
-    progressBar.style.width = progress + '%';
+// 檢查sessionStorage中是否有'loadedOnce'標記
+if (sessionStorage.getItem('loadedOnce')) {
+    // 如果已經加載過，則直接顯示內容並隱藏載入動畫
+    document.getElementById('loading-container').style.display = 'none';
+    content.style.display = 'block';
+} else {
+    // 如果是第一次加載，則顯示載入動畫
+    let progress = 0;
+    let interval = setInterval(function() {
+        progress += 10;
+        progressBar.style.width = progress + '%';
 
-    if (progress >= 100) {
-        clearInterval(interval);
-        setTimeout(function() {
-            document.getElementById('loading-container').style.display = 'none';
-            content.style.display = 'block';
-            content.classList.add('sliding'); // 添加sliding類來觸發滑動效果
-        }, 500);
-    }
-}, 100);
+        if (progress >= 100) {
+            clearInterval(interval);
+            setTimeout(function() {
+                document.getElementById('loading-container').style.display = 'none';
+                content.style.display = 'block';
+                content.classList.add('sliding'); // 添加sliding類來觸發滑動效果
+            }, 500);
+        }
+    }, 100);
+    // 設置'loadedOnce'標記到sessionStorage中
+    sessionStorage.setItem('loadedOnce', true);
+}
 
 //All images taken from PEXELS.COM - free stock images
 "use strict";

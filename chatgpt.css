@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 2rem;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+}
+
+h1 {
+    color: #20232a;
+    border-bottom: 1px solid #20232a;
+    padding-bottom: 0.5rem;
+}
+
+h2 {
+    color: #61dafb;
+    margin-top: 1.5rem;
+}
+
+p {
+    color: #20232a;
+}
+
+code {
+    display: block;
+    padding: 1rem;
+    background-color: #e6e6e6;
+    border-radius: 5px;
+    color: #20232a;
+    white-space: pre-wrap; /* 這行確保文字換行 */
+    border: 1px solid #ccc; /* 添加邊框 */
+}
+
+footer {
+    margin-top: 3rem;
+    text-align: center;
+    color: #20232a;
+}
+
+.question {
+    white-space: pre-wrap;
+}
+
+.answer {
+    white-space: pre-wrap;
+}

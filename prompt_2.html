@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日內當沖策略演示</title>
+    <link rel="stylesheet" href="chatgpt.css">
+</head>
+<body>
+
+<h1>日內當沖策略演示</h1>
+
+<!-- 問答區 1 -->
+<div class="qa-section">
+    <h2>問題 1：</h2>
+    <p class="question">我在整理開發過的python程式
+你做為python專家
+請先理解我的程式後 進行重構建議
+"""
+#重構，進行
+import tkinter as tk
+from tkinter import ttk
+import sqlite3
+import yfinance as yf
+import matplotlib.pyplot as plt
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+import pandas as pd
+import matplotlib.dates as mdates
+from datetime import datetime, timedelta
+
+class App:
+    def __init__(self, root):
+        self.time_interval=59
+        self.root = root
+        self.setup_root()
+        
+        self.ticks = self.read_ticks('MXFR1', '2023-07-12', '2023-07-12')
+        self.start_time = self.ticks.index.min().replace(microsecond=0)
+        self.end_time = self.start_time + timedelta(seconds=59)
+</p>
+
+    <h2>答案 2：</h2>
+    <p class="answer">您的程式碼主要是使用 tkinter 建立一個 GUI 應用程式，並從 SQLite 數據庫中讀取股票數據，然後使用 matplotlib 顯示這些數據。以下是一些建議的重構方法：
+
+模組化：將功能拆分為多個方法或類，以便於維護和擴展。
+數據庫路徑：避免硬編碼數據庫的路徑，可以將其作為參數傳遞或使用配置文件。
+錯誤處理：增加對數據庫連接和查詢的錯誤處理。
+UI 布局：將 UI 布局和數據處理分開，使其更加結構化。
+常數和設定：將常數和設定（如時間間隔、數據庫路徑等）提取到一個單獨的配置文件或模組中。
+以下是重構後的部分程式碼：</p>
+    <code>
+import tkinter as tk
+from tkinter import ttk
+import sqlite3
+import yfinance as yf
+import matplotlib.pyplot as plt
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+import pandas as pd
+import matplotlib.dates as mdates
+from datetime import datetime, timedelta
+
+START_TIME = "08:45:00"
+END_TIME = "13:45:00"
+
+class App:
+    def __init__(self, root):
+        self.time_interval = 59
+        self.root = root
+        self.setup_root()
+        # ... (其他初始化代碼)
+
+    def setup_root(self):
+        # ... (原始代碼)
+
+    # ... (其他方法)
+
+    def read_ticks(self, contractName, startday, endday):
+        return self._read_from_db(DB_PATH_TICKS, contractName, startday, endday)
+
+    def read_kbars(self, contractName, startday, endday):
+        return self._read_from_db(DB_PATH_KBARS, contractName, startday, endday)
+
+    def _read_from_db(self, db_path, contractName, startday, endday):
+        conn = sqlite3.connect(db_path)
+        # ... (原始代碼)
+        return df
+
+    # ... (其他方法)
+
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = App(root)
+    root.mainloop()
+  </code>
+</div>
+
+
+<footer>
+    <p>本文由 kakapao 部落格 提供，感謝閱讀。</p>
+</footer>
+
+</body>
+</html>
