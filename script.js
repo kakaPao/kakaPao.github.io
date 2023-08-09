@@ -25,7 +25,7 @@ window.onload = function() {
 //Navigation bar buttons
 var about = document.querySelector("#navAbout");
 var services = document.querySelector("#navServices");
-var contact = document.querySelector("#navContact");
+var trade = document.querySelector("#navTrade");
 
 about.onclick = function() {
   document.querySelector("#aboutRow").scrollIntoView();
@@ -37,7 +37,7 @@ services.onclick = function() {
   window.scrollBy(0, -50);
 }
 
-contact.onclick = function() {
+trade.onclick = function() {
   document.querySelector("#phoneContact").scrollIntoView();
   window.scrollBy(0, -50);
 }
